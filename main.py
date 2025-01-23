@@ -1,10 +1,18 @@
 import sys 
 
+def default():
+    print("Hello world")
+
 def main():
-    if sys.argv[1] == "test":
-        print("soon")
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "duck":
+            print("soon")
+        elif sys.argv[1] == "dog":
+            print("woof!")
+        else: 
+            print("unknown")
     else:
-        print("Hello")
+        default()
 
 if __name__ == "__main__":
     main()
